@@ -26,10 +26,13 @@ class Application
       if @@items.include?(item)
         @@cart << item
         resp.write "added #{item}"
+      else
+        resp.write " We don't habe that item"
+      end
     else
       resp.write "Path Not Found"
     end
-  end
+  
 
     resp.finish
   end
